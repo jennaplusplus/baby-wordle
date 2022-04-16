@@ -1132,7 +1132,7 @@ this.wordle.bundle = function(e) {
         t
     }(u(HTMLElement));
     customElements.define("game-toast", Ia);
-    var possibleSolutions = ["jeremy", "weston"]
+    var possibleSolutions = ['arthur', 'cooper', 'george', 'walker', 'pierce', 'carson', 'tucker', 'xander', 'holden', 'marcus', 'bryson', 'connor', 'emilio', 'austin', 'steven', 'declan', 'camden', 'karter', 'easton', 'hunter', 'graham', 'thiago', 'weston', 'matteo', 'legend', 'carter', 'jeremy', 'kaiden', 'samuel', 'victor', 'carlos', 'landon', 'miguel', 'calvin', 'brooks', 'andrew', 'justin', 'damian', 'kayden', 'andres', 'edward', 'adriel', 'joshua', 'joseph', 'parker', 'xavier', 'daniel', 'josiah', 'elliot', 'matias']
       , validGuesses = ['oliver', 'elijah', 'daniel', 'samuel', 'joseph', 'carter', 'julian', 'jayden', 'hudson', 'thomas', 'josiah', 'isaiah', 'andrew', 'joshua', 'nathan', 'adrian', 'colton', 'landon', 'hunter', 'easton', 'cooper', 'connor', 'robert', 'jordan', 'carson', 'jaxson', 'austin', 'brooks', 'xavier', 'parker', 'wesley', 'kayden', 'declan', 'waylon', 'weston', 'emmett', 'damian', 'bryson', 'sawyer', 'legend', 'george', 'ashton', 'jasper', 'kaiden', 'adriel', 'calvin', 'carlos', 'august', 'archer', 'karter', 'arthur', 'elliot', 'thiago', 'camden', 'justin', 'maddox', 'matteo', 'hayden', 'graham', 'zayden', 'xander', 'miguel', 'tucker', 'edward', 'dawson', 'victor', 'walker', 'matias', 'andres', 'adonis', 'steven', 'marcus', 'holden', 'emilio', 'jeremy', 'israel', 'rafael', 'javier', 'paxton', 'karson', 'cayden', 'tobias', 'dallas', 'walter', 'khalil', 'damien', 'zander', 'chance', 'daxton', 'lennox', 'martin', 'kayson', 'jensen', 'finley', 'gunner', 'angelo', 'jaylen', 'prince', 'manuel', 'gideon', 'tanner', 'julius', 'callum', 'travis', 'warren', 'leonel', 'corbin', 'dakota', 'ismael', 'colson', 'gianni', 'lawson', 'armani', 'hector', 'jaxton', 'sergio', 'caiden', 'kamari', 'johnny', 'jaiden', 'raiden', 'trevor', 'harvey', 'fabian', 'oakley', 'porter', 'peyton', 'wilder', 'callan', 'briggs', 'conner', 'kolton', 'alijah', 'zyaire', 'apollo', 'philip', 'kaison', 'baylor', 'collin', 'archie', 'dalton', 'alonzo', 'isaias', 'leland', 'kamden', 'marcos', 'alexis', 'izaiah', 'keegan', 'pierce', 'moises', 'emmitt', 'dorian', 'zaiden', 'deacon', 'abdiel', 'kieran', 'ryland', 'albert', 'denver', 'gunnar', 'jayson', 'callen', 'jasiah', 'kannon', 'huxley', 'cannon', 'conrad', 'benson', 'ronald', 'dexter', 'kaysen', 'skyler', 'roland', 'samson', 'sutton', 'jaziel', 'arturo', 'jamari', 'jaxtyn', 'julien', 'landen', 'darius', 'boston', 'taylor', 'edison', 'watson', 'quincy', 'brycen', 'marvin', 'dariel', 'donald', 'raylan', 'shiloh', 'layton', 'landyn', 'ledger', 'kareem', 'lucian', 'dennis', 'ermias', 'wilson', 'dustin', 'bryant', 'lionel', 'dakari', 'dillon', 'nelson', 'cullen', 'harlan', 'kellan', 'lennon', 'marcel', 'keaton', 'morgan', 'karsyn', 'miller', 'curtis', 'anakin', 'korbin', 'cayson', 'mathew', 'vihaan', 'jagger', 'darren', 'rayden', 'joziah', 'atreus', 'junior', 'melvin', 'maximo', 'colten', 'legacy', 'westin', 'gatlin', 'harley', 'alonso', 'eliseo', 'kellen', 'jaxxon', 'crosby', 'magnus', 'forest', 'misael', 'madden', 'braden', 'hassan', 'alaric', 'anders', 'darian', 'elisha', 'jakobe', 'eugene', 'ishaan', 'wesson', 'yehuda', 'alvaro', 'brayan', 'jadiel', 'kamryn', 'rodney', 'yousef', 'felipe', 'kaiser', 'brodie', 'london', 'eithan', 'stefan', 'ulises', 'camilo', 'jakari', 'judson', 'zavier', 'damari', 'blaine', 'henrik', 'khalid', 'darwin', 'alfred', 'fisher', 'jacoby', 'osiris', 'harlem', 'santos', 'maison', 'reuben', 'kelvin', 'azrael', 'harold', 'franco', 'blaise', 'marley', 'davion', 'canaan', 'jabari', 'landry', 'hakeem', 'truett', 'gerald', 'gordon', 'kamdyn', 'foster', 'murphy', 'cedric', 'colter', 'dayton', 'duncan', 'bishop', 'davian', 'marlon', 'maxton', 'harris', 'keenan', 'korbyn', 'kylian', 'turner', 'willie']
       , Ra = "present"
       , Ha = "correct"
@@ -1162,7 +1162,7 @@ this.wordle.bundle = function(e) {
           , s = e % 100;
         return e + (a[(s - 20) % 10] || a[s] || a[0])
     }
-    var debutDate = new Date(2021,5,19,0,0,0,0); //jmp change this?
+    var debutDate = new Date(2022,8,1,0,0,0,0); // september 1
     function Ba(e, a) {
         var s = new Date(e)
           , t = new Date(a).setHours(0, 0, 0, 0) - s.setHours(0, 0, 0, 0);
@@ -1170,7 +1170,7 @@ this.wordle.bundle = function(e) {
     }
     function Va(e) {
         var a, s = Fa(e);
-        return a = s % possibleSolutions.length,
+        return a = s % possibleSolutions.length < 0 ? s % possibleSolutions.length * -1 : s % possibleSolutions.length,
         possibleSolutions[a]
     }
     function Fa(e) {
@@ -1576,10 +1576,6 @@ this.wordle.bundle = function(e) {
                 )),
                 this.shadowRoot.getElementById("statistics-button").addEventListener("click", (function(e) {
                     d.showStatsModal()
-                }
-                )),
-                this.shadowRoot.getElementById("nav-button").addEventListener("click", (function(e) {
-                    d.showNavModal()
                 }
                 )),
                 window.addEventListener("resize", this.sizeBoard.bind(this)),
@@ -2405,7 +2401,6 @@ this.wordle.bundle = function(e) {
     e.GameIcon = ot,
     e.GameKeyboard = ks,
     e.GameModal = hs,
-    e.GameNav = Us,
     e.GamePage = st,
     e.GameRow = x,
     e.GameSettings = Ta,
@@ -2416,7 +2411,6 @@ this.wordle.bundle = function(e) {
     e.GameToast = Ia,
     e.NYTIcon = it,
     e.NavIcon = dt,
-    e.NavModal = Xs,
     Object.defineProperty(e, "__esModule", {
         value: !0
     }),
