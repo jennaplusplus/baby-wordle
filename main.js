@@ -1182,7 +1182,7 @@ this.wordle.bundle = function(e) {
       , Ja = {
         currentStreak: 0,
         maxStreak: 0,
-        guesses: o({ // TODO numbers?
+        guesses: o({
             1: 0,
             2: 0,
             3: 0,
@@ -1347,7 +1347,7 @@ this.wordle.bundle = function(e) {
                     if (e = s,
                     !validGuesses.includes(e) && !possibleSolutions.includes(e))
                         return a.setAttribute("invalid", ""),
-                        void this.addToast("Not in word list");
+                        void this.addToast("Not in name list");
                     if (this.hardMode) {
                         var t = function(e, a, s) {
                             if (!e || !a || !s)
@@ -2019,7 +2019,7 @@ this.wordle.bundle = function(e) {
     var $s = document.createElement("template");
     $s.innerHTML = '\n    <div class="graph-container">\n      <div class="guess"></div>\n      <div class="graph">\n        <div class="graph-bar">\n          <div class="num-guesses">\n        </div>\n      </div>\n      </div>\n    </div>\n';
     var Gs = document.createElement("template");
-    Gs.innerHTML = '\n  <div class="countdown">\n    <h1>Next WORDLE</h1>\n    <div id="timer">\n      <div class="statistic-container">\n        <div class="statistic timer">\n          <countdown-timer></countdown-timer>\n        </div>\n      </div>\n    </div>\n  </div>\n  <div class="share">\n    <button id="share-button">\n      Share <game-icon icon="share"></game-icon>\n    </button>\n  </div>\n';
+    Gs.innerHTML = '\n  <div class="countdown">\n    <h1>Next BABYL</h1>\n    <div id="timer">\n      <div class="statistic-container">\n        <div class="statistic timer">\n          <countdown-timer></countdown-timer>\n        </div>\n      </div>\n    </div>\n  </div>\n  <div class="share">\n    <button id="share-button">\n      Share <game-icon icon="share"></game-icon>\n    </button>\n  </div>\n';
     var Bs = {
         currentStreak: "Current Streak",
         maxStreak: "Max Streak",
