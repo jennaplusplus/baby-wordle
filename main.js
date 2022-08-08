@@ -1170,6 +1170,10 @@ this.wordle.bundle = function(e) {
     }
     function Va(e) {
         var a, s = Fa(e);
+        var hash = location.hash;
+        if (hash.toLowerCase() === '#happybirthday') {
+            return atob('YXVndXN0');
+        }
         return a = s % possibleSolutions.length < 0 ? s % possibleSolutions.length * -1 : s % possibleSolutions.length,
         possibleSolutions[a]
     }
@@ -1310,10 +1314,11 @@ this.wordle.bundle = function(e) {
             e.today = new Date,
             e.refreshTimer = as();
             var n = getLocalStorage();
+            var hbd = location.hash.toLowerCase() === '#happybirthday';
             return e.lastPlayedTs = n.lastPlayedTs,
             e.lastCompletedTs = n.lastCompletedTs,
-            !e.lastPlayedTs || Ba(new Date(e.lastPlayedTs), e.today) >= 1 ? (e.boardState = new Array(6).fill(""), // TODO numbers?
-            e.evaluations = new Array(6).fill(null), // TODO numbers?
+            !e.lastPlayedTs || Ba(new Date(e.lastPlayedTs), e.today) >= 1 || hbd ? (e.boardState = new Array(6).fill(""),
+            e.evaluations = new Array(6).fill(null),
             e.solution = Va(e.today),
             e.dayOffset = Fa(e.today),
             e.lastCompletedTs = n.lastCompletedTs,
@@ -1341,7 +1346,6 @@ this.wordle.bundle = function(e) {
         return n(t, [{
             key: "evaluateRow",
             value: function() {
-                // TODO numbers
                 if (6 === this.tileIndex && !(this.rowIndex >= 6)) {
                     var e, a = this.$board.querySelectorAll("game-row")[this.rowIndex], s = this.boardState[this.rowIndex];
                     if (e = s,
@@ -1437,7 +1441,6 @@ this.wordle.bundle = function(e) {
         }, {
             key: "addLetter",
             value: function(e) {
-                // TODO numbers
                 this.gameStatus === ls && (this.canInput && (this.tileIndex >= 6 || (this.boardState[this.rowIndex] += e,
                 this.$board.querySelectorAll("game-row")[this.rowIndex].setAttribute("letters", this.boardState[this.rowIndex]),
                 this.tileIndex += 1)))
@@ -1457,7 +1460,6 @@ this.wordle.bundle = function(e) {
             key: "submitGuess",
             value: function() {
                 if (this.gameStatus === ls && this.canInput) {
-                    // TODO numbers
                     if (6 !== this.tileIndex)
                         return this.$board.querySelectorAll("game-row")[this.rowIndex].setAttribute("invalid", ""),
                         void this.addToast("Not enough letters");
@@ -1474,7 +1476,7 @@ this.wordle.bundle = function(e) {
                 s ? this.shadowRoot.querySelector("#system-toaster").prepend(t) : this.shadowRoot.querySelector("#game-toaster").prepend(t)
             }
         }, {
-            key: "sizeBoard", // TODO numbers
+            key: "sizeBoard",
             value: function() {
                 var e = this.shadowRoot.querySelector("#board-container")
                   , a = Math.min(Math.floor(e.clientHeight * (5 / 6)), 350)
@@ -1513,9 +1515,9 @@ this.wordle.bundle = function(e) {
                 }
                 ), 100);
                 for (var c = 0; c < 6; c++) {
-                    var u = document.createElement("game-row"); // TODO numbers
+                    var u = document.createElement("game-row");
                     u.setAttribute("letters", this.boardState[c]),
-                    u.setAttribute("length", 6), // TODO numbers
+                    u.setAttribute("length", 6),
                     this.evaluations[c] && (u.evaluation = this.evaluations[c]),
                     this.$board.appendChild(u)
                 }
@@ -1816,7 +1818,6 @@ this.wordle.bundle = function(e) {
         ),
         o;
         function i(o) {
-            // TODO numbers- what is this
             return function(i) {
                 return function(o) {
                     if (s)
@@ -2099,7 +2100,7 @@ this.wordle.bundle = function(e) {
                               , o = e.isWin
                               , r = JSON.parse(window.localStorage.getItem(j))
                               , i = JSON.parse(window.localStorage.getItem(S))
-                              , l = "Wordle ".concat(s);
+                              , l = "Babyl ".concat(s);
                             l += " ".concat(o ? t : "X", "/").concat(6),
                             n && (l += "*");
                             var d = "";
